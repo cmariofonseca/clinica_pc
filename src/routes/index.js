@@ -4,10 +4,14 @@ const fs = require('fs')
 const { v4: uuidv4 } = require('uuid')
 
 let currentUser = {}
+let users = []
+let requests = []
+let devices = []
+users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
+requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
+devices = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
 
 /* MODULO GESTION DE USUARIOS --------------------------------------------------- */
-let users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-
 router.get('/home', (req, res) =>{
   res.render('index')
 })
@@ -64,7 +68,6 @@ router.get('/download', (req, res) => {
 })
 
 /* MODULO GESTION DE SOLICITUDES ------------------------------------------------ */
-let requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
 router.post('/devices', (req, res) => {
   // req.body.id = uuidv4()
   console.log(req.body)
