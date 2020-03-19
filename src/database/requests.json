@@ -1,0 +1,41 @@
+[
+  {
+    "request_description": "",
+    "receiving_date": "",
+    "receiving_employee": "",
+    "delivery_employee": "",
+    "customer": "",
+    "devices": [
+      {
+        "serial": "1234567890",
+        "pieces": [
+          {
+            "item": "Board",
+            "serial": "erty6787654456er65"
+          },
+          {
+            "item": "Display",
+            "serial": "as5678df543fhj9xc6"
+          }
+        ],
+        "brand": "Acer",
+        "model": "Note book A123",
+        "speces": "Portatil de 14 pulgadas color gris",
+        "owner": "Carlos Mario Fonseca Naranjo"
+      }
+    ],
+    "total_paid": "",
+    "total_spent": "",
+    "total_net": "",
+    "delivery_date": "",
+    "delevery_description": [
+      {
+        "item": "",
+        "action": "",
+        "price": ""
+      }
+    ],
+    "responsible_employee": "",
+    "code": ""
+  }
+]

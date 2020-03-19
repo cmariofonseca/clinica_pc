@@ -1,0 +1,38 @@
+[
+  {
+    "identification": "1234567890",
+    "name": "Carlos Mario",
+    "last_name": "Fonseca Naranjo",
+    "user_name": "cmariofonseca",
+    "password": "User2020$",
+    "date_born": "20-11-1974",
+    "email": "cmariofonseca@gmail.com",
+    "address": "Carrera 52 calle 9",
+    "phone": "0987654321",
+    "id": "0925b82e-4de4-4dc4-b02a-552c7e3341fa"
+  },
+  {
+    "identification": "0987654321",
+    "name": "Alejandra",
+    "last_name": "Fonseca Saldarriaga",
+    "user_name": "alejandra",
+    "password": "User2020$",
+    "date_born": "18-03-2006",
+    "email": "alejandra@gmail.com",
+    "address": "Carrera 52 calle 9",
+    "phone": "5676543234",
+    "id": "439f60b7-1dff-4c73-a1ae-8d5c42c1541d"
+  },
+  {
+    "identification": "5432109876",
+    "name": "Claudia Patricia",
+    "last_name": "Uran Buitrago",
+    "user_name": "claudiapatricia",
+    "password": "User2020$",
+    "date_born": "01-01-2000",
+    "email": "claudiapatricia@hotmail.com",
+    "address": "Carrera 52 calle 9",
+    "phone": "0987654321",
+    "id": "916e7324-cecb-477d-a143-2e3053535fb1"
+  }
+]
