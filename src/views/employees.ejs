@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
   <head>
     <%- include('partials/header') %>
@@ -8,6 +8,44 @@
   <body>
 
     <%- include('partials/navigation')  %>
+
+    <% requests.forEach(request => { %>
+      <div class="container p-4">
+        <form method="POST" action="/home" class="card card-body">
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Descripción solicitud</label>
+            <div class="col-sm-7">
+              <input placeholder="<%= request.request_description %>" type="text" class="form-control" readonly>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Fecha de recibido</label>
+            <div class="col-sm-7">
+              <input placeholder="<%= request.receiving_date %>" type="text" class="form-control" readonly>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="receiving_employee" class="col-sm-5 col-form-label">Empleado que recibe</label>
+            <div class="col-sm-7">
+              <input name="receiving_employee" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="delivery_employee" class="col-sm-5 col-form-label">Empleado que entrega</label>
+            <div class="col-sm-7">
+              <input name="delivery_employee" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label class="col-sm-5 col-form-label">Cliente</label>
+            <div class="col-sm-7">
+              <input placeholder="<%= request.customer %>" type="text" class="form-control" readonly>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Registrarse</button>
+        </form>
+      </div>
+    <% }) %>
 
   </body>
 
