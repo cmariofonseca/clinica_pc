@@ -37,5 +37,42 @@
     ],
     "responsible_employee": "",
     "code": ""
+  },
+  {
+    "request_description": "Daño por caida de un piso 25",
+    "receiving_date": "",
+    "receiving_employee": "",
+    "delivery_employee": "",
+    "customer": "",
+    "devices": {
+      "serial": "",
+      "pieces": [
+        {
+          "item": "",
+          "serial": ""
+        },
+        {
+          "item": "",
+          "serial": ""
+        }
+      ],
+      "brand": "",
+      "model": "Accer notebook2",
+      "speces": "",
+      "owner": "Carlos Mario Fonseca Naranjo"
+    },
+    "total_paid": "",
+    "total_spent": "",
+    "total_net": "",
+    "delivery_date": "",
+    "delevery_description": [
+      {
+        "item": "",
+        "action": "",
+        "price": ""
+      }
+    ],
+    "responsible_employee": "",
+    "code": "8297af17-ffeb-4694-a4e0-8c1716b7949e"
   }
 ]
