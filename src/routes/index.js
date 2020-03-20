@@ -5,6 +5,8 @@ const { v4: uuidv4 } = require('uuid')
 
 let datetime = ''
 let currentUser = {}
+let currentDevice={}
+let device= []
 let users = []
 let requests = []
 users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
@@ -114,6 +116,19 @@ router.post('/devices', (req, res) => {
 })
 
 /* MODULO GESTION DE EQUIPOS ---------------------------------------------------- */
+router.get('/save-device', (req, res) =>{
+  res.render('devices.ejs')
+})
+
+router.post('/save-device', (req, res) => {
+  req.body.code = uuidv4()
+  currentDevice = req.body
+  device.push(currentDevice)
+  fs.writeFileSync('src/database/devices.json', JSON.stringify(device), 'utf-8')
+  res.redirect('/save-device')
+})
+
+
 /* MODULO GESTION DE REPORTES --------------------------------------------------- */
 
 module.exports = router

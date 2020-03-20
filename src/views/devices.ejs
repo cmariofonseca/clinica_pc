@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <%- include('partials/header') %>
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Clinica PC</h1>
+      <h4>Dispositivos</h4>
+    </div>
+
+    <div class="container p-4">
+      <div class="row">
+
+        <!-- Formulario de registro -->
+        <div class="col-md-6">
+          <form method="POST" action="/save-device" class="card card-body">
+            <div class="form-group row">
+              <label for="code" class="col-sm-5 col-form-label">Codigo:</label>
+              <div class="col-sm-7">
+                <input name="code" id="code" type="text" class="form-control" required>
+              </div>
+            </div>
+            <div class="form-group row">
+                <label for="serial" class="col-sm-5 col-form-label">Serial:</label>
+                <div class="col-sm-7">
+                  <input name="serial" id="serial" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="user" class="col-sm-5 col-form-label">Usuario:</label>
+                <div class="col-sm-7">
+                  <input name="user" id="user" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="brand" class="col-sm-5 col-form-label">Marca:</label>
+                <div class="col-sm-7">
+                  <input name="brand" id="brand" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="model" class="col-sm-5 col-form-label">Modelo</label>
+                <div class="col-sm-7">
+                  <input name="model" id="model" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="processor" class="col-sm-5 col-form-label">Procesador:</label>
+                <div class="col-sm-7">
+                  <input name="processor" id="processor" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="ram" class="col-sm-5 col-form-label">Ram:</label>
+                <div class="col-sm-7">
+                  <input name="ram" id="ram" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="disk" class="col-sm-5 col-form-label">Disco:</label>
+                <div class="col-sm-7">
+                  <input name="disk" id="disk" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="os" class="col-sm-5 col-form-label">OS:</label>
+                <div class="col-sm-7">
+                  <input name="os" id="os" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="office" class="col-sm-5 col-form-label">Office:</label>
+                <div class="col-sm-7">
+                  <input name="office" id="office" type="text" class="form-control" required>
+                </div>
+              </div>
+              <div class="form-group row">
+                <label for="owner" class="col-sm-5 col-form-label">Propietario:</label>
+                <div class="col-sm-7">
+                  <input name="owner" id="owner" type="text" class="form-control" required>
+                </div>
+              </div>                
+            <button class="btn btn-primary" type="submit">Guardar</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
