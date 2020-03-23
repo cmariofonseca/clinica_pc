@@ -5,7 +5,7 @@
     <%- include('partials/header') %>
   </head>
 
-  <body>
+  <body style="background-color: lightsteelblue;">
 
     <%- include('partials/navigation')  %>
 
@@ -14,15 +14,24 @@
         <div class="container p-4">
           <form method="POST" action="/request" class="card card-body">
             <div class="form-group row">
+              <label for="code" class="col-sm-5 col-form-label">Código de solicitud</label>
+              <div class="col-sm-7">
+                <input name="code" value="<%= request.code %>" placeholder="<%= request.code %>" type="text" class="form-control"
+                  readonly>
+              </div>
+            </div>
+            <div class="form-group row">
               <label for="request_description" class="col-sm-5 col-form-label">Descripción solicitud</label>
               <div class="col-sm-7">
-                <input name="request_description" value="<%= request.request_description %>" placeholder="<%= request.request_description %>" type="text" class="form-control" readonly>
+                <input name="request_description" value="<%= request.request_description %>"
+                  placeholder="<%= request.request_description %>" type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
               <label for="receiving_date" class="col-sm-5 col-form-label">Fecha de recibido</label>
               <div class="col-sm-7">
-                <input name="receiving_date" value="<%= request.receiving_date %>" placeholder="<%= request.receiving_date %>" type="text" class="form-control" readonly>
+                <input name="receiving_date" value="<%= request.receiving_date %>" placeholder="<%= request.receiving_date %>"
+                  type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
@@ -40,14 +49,16 @@
             <div class="form-group row">
               <label for="customer" class="col-sm-5 col-form-label">Cliente</label>
               <div class="col-sm-7">
-                <input name="customer" value="<%= request.customer %>" placeholder="<%= request.customer %>" type="text" class="form-control" readonly>
+                <input name="customer" value="<%= request.customer %>" placeholder="<%= request.customer %>" type="text"
+                  class="form-control" readonly>
               </div>
             </div>
             <!-- Detalles del equipo, lectura de cada uno de los campos --------------------------- -->
             <div class="form-group row">
               <label for="devices" class="col-sm-5 col-form-label">Detalle del equipo</label>
               <div class="col-sm-7">
-                <input name="devices" value="<%= request.devices %>" placeholder="<%= request.devices %>" type="text" class="form-control" readonly>
+                <input name="devices" value="<%= request.devices %>" placeholder="<%= request.devices %>" type="text"
+                  class="form-control" readonly>
               </div>
             </div>
             <!-- Fin detalle del equipo ----------------------------------------------------------- -->
@@ -83,13 +94,7 @@
                 <input name="responsible_employee" type="text" class="form-control" required>
               </div>
             </div>
-            <div class="form-group row">
-              <label for="code" class="col-sm-5 col-form-label">Código de solicitud</label>
-              <div class="col-sm-7">
-                <input name="code" value="<%= request.code %>" placeholder="<%= request.code %>" type="text" class="form-control" readonly>
-              </div>
-            </div>
-            <button class="btn btn-primary" type="submit">Guardar todos los datos de la solicitud</button>
+            <button class="btn btn-primary" type="submit">Guardar datos de la solicitud</button>
           </form>
         </div>
       <% } %>

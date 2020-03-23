@@ -1,0 +1,5 @@
+identification     name                 last_name               user_name           password       date_born      email                           address                phone          id                                       
+1234567890         Carlos Mario         Fonseca Naranjo         cmariofonseca       User2020$      20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     49a701c3-037c-47c0-aa24-aade950ce845     
+0987654321         Alejandra            Fonseca Saldarriaga     alejandra           User2020$a     18-03-2006     alejandra@gmail.com             Carrera 52 calle 9     5676543234     c6e569e5-4084-406b-ab2d-d7601853c03e     
+5432109876         Claudia Patricia     Uran Buitrago           claudiapatricia     User2020$a     01-01-2000     claudiapatricia@hotmail.com     Carrera 52 calle 9     5676543234     fd756cbb-8a17-4a06-88ce-55be1644db1e     
+5432109876         Claudia Patricia     Uran Buitrago           claudiapatricia     User2020$a     01-01-2000     claudiapatricia@hotmail.com     Carrera 52 calle 9     5676543234     85431c83-2e9c-4256-8d25-a0b9b8a104d6     

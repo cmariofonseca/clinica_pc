@@ -1,0 +1,3 @@
+identification     name             last_name               user_name         password      date_born      email                       address                phone          id                                       
+1234567890         Carlos Mario     Fonseca Naranjo         cmariofonseca     User2020$     20-11-1974     cmariofonseca@gmail.com     Carrera 52 calle 9     0987654321     f6d4165b-13b5-4aa6-95bd-5f9fce21eccf     
+0987654321         Alejandra        Fonseca Saldarriaga     alejandra         User2020$     18-03-2006     alejandra@gmail.com         Carrera 52 calle 9     5676543234     e8fc0598-bc36-4e97-aadf-0a1681a983ad     

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <%- include('partials/header') %>
+  </head>
+
+  <body style="background-color: lightsteelblue;">
+
+    <%- include('partials/navigation')  %>
+
+    <div class="container">
+      <h1>Clinica PC</h1>
+      <h4>Llene el formulario con una descripción clara del servicio solicitado</h4>
+    </div>
+
+    <div class="container p-4">
+      <div class="col-md-10">
+        <form method="POST" action="/receptions" class="card card-body">
+          <div class="form-group">
+            <label for="request_description">Descripción detallada de la solicitud</label>
+            <textarea name="request_description" id="request_description" class="form-control" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label for="model">Equipo(s)</label>
+            <input name="model" id="model" type="text" class="form-control" required>
+          </div>
+          <button class="btn btn-primary" type="submit">Registrar equipo</button>
+        </form>
+      </div>
+    </div>
+
+  </body>
+
+</html>
