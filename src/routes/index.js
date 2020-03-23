@@ -2,37 +2,17 @@ const { Router } = require('express')
 const router = Router()
 const fs = require('fs')
 const { v4: uuidv4 } = require('uuid')
+const jsonToTxt = require('json-to-txt')
 
 let datetime = ''
 let currentUser = {}
 let users = []
+let usersTxt = ''
 let requests = []
 
-/* MODULO GESTION DE USUARIOS --------------------------------------------------- */
-router.get('/home', (req, res) => {
-  res.render('index.ejs')
-})
-
-router.post('/home', (req, res) => {
-  users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-  req.body.id = uuidv4()
-  currentUser = req.body
-  users.push(currentUser)
-  fs.writeFileSync('src/database/users.json', JSON.stringify(users), 'utf-8')
-  fs.writeFileSync('src/database/currentUser.json', JSON.stringify(currentUser), 'utf-8')
-  res.redirect('/customers')
-})
-
-router.get('/customers', (req, res) => {
-  res.render('customers.ejs')
-})
-
-/* Endpoint de desarrollo, eliminar en producción */
-router.get('/list-users', (req, res) => {
-  users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-  res.render('users.ejs', {
-    users
-  })
+/* LOGIN EMPLEADOS */
+router.get('/login', (req, res) => {
+  res.render('login.ejs')
 })
 
 router.post('/login', (req, res) => {
@@ -41,62 +21,53 @@ router.post('/login', (req, res) => {
   const newLogin = { user_name, password, }
   users.forEach(user => {
     if (user.user_name == user_name && user.password == password) {
-      res.redirect('/employees')
+      res.redirect('/registers')
     } else {
-      res.redirect('/home')
+      res.redirect('/login')
     }
   })
 })
 
-router.get('/employees', (req, res) => {
-  requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
-  res.render('employees.ejs', {
-    requests
-  })
+
+/* REGISGTRO DE CLIENTES */
+router.get('/registers', (req, res) => {
+  res.render('registers.ejs')
 })
 
-/* Endpoint de desarrollo, eliminar en producción */
-router.get('/delete/:id', (req, res) => {
+router.post('/registers', (req, res) => {
   users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-  users = users.filter(user => user.id != req.params.id)
+  req.body.id = uuidv4()
+  currentUser = req.body
+  users.push(currentUser)
   fs.writeFileSync('src/database/users.json', JSON.stringify(users), 'utf-8')
-  res.redirect('/list-users')
+  usersTxt = jsonToTxt({ filePath: 'src/database/users.json' });
+  fs.writeFileSync('src/database/users.txt', usersTxt, 'utf-8')
+  fs.writeFileSync('src/database/currentUser.json', JSON.stringify(currentUser), 'utf-8')
+  res.redirect('/receptions')
 })
 
-router.get('/download', (req, res) => {
-  console.log('llamado a la ruta')
+
+/* MODULO GESTION DE USUARIOS --------------------------------------------------- */
+router.get('/receptions', (req, res) => {
+  res.render('receptions.ejs')
 })
 
-/* MODULO GESTION DE SOLICITUDES ------------------------------------------------ */
-router.post('/devices', (req, res) => {
+router.post('/receptions', (req, res) => {
   datetime = new Date().toLocaleString()
   requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
   currentUser = JSON.parse(fs.readFileSync('src/database/currentUser.json', 'utf-8'))
-  const newDevice = {
-    serial: '',
-    pieces: [
-      {
-        item: '',
-        serial: ''
-      },
-      {
-        item: '',
-        serial: ''
-      }
-    ],
-    brand: '',
-    model: req.body.model,
-    speces: '',
-    owner: currentUser.name + ' ' + currentUser.last_name
-  }
   const newRequest = {
     isActive: true,
+    isDevice: true,
     request_description: req.body.request_description,
     receiving_date: datetime,
     receiving_employee: "",
     delivery_employee: "",
     customer: currentUser.name + ' ' + currentUser.last_name,
-    devices: newDevice,
+    devices: {
+      model: req.body.model,
+      owner: currentUser.name + ' ' + currentUser.last_name,
+    },
     total_paid: "",
     total_spent: "",
     total_net: "",
@@ -111,7 +82,20 @@ router.post('/devices', (req, res) => {
   }
   requests.push(newRequest)
   fs.writeFileSync('src/database/requests.json', JSON.stringify(requests), 'utf-8')
-  res.redirect('/home')
+  res.redirect('/users')
+})
+
+
+/* MODULO GESTION DE EQUIPOS ---------------------------------------------------- */
+
+
+/* MODULO GESTION DE SOLICITUDES ------------------------------------------------ */
+router.get('/requests', (req, res) => {
+  requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
+  console.log(requests)
+  res.render('requests.ejs', {
+    requests
+  })
 })
 
 router.post('/request', (req, res) => {
@@ -160,10 +144,16 @@ router.post('/request', (req, res) => {
   })
   requests[position] = requestUpdated
   fs.writeFileSync('src/database/requests.json', JSON.stringify(requests), 'utf-8')
-  res.redirect('/employees')
+  res.redirect('/requests')
 })
 
-/* MODULO GESTION DE EQUIPOS ---------------------------------------------------- */
 /* MODULO GESTION DE REPORTES --------------------------------------------------- */
+router.get('/reports/users', (req, res) => {
+  res.download('src/download/users.txt')
+})
+
+router.post('/reports', (req, res) => {
+  res.redirect('/reports')
+})
 
 module.exports = router

@@ -9,12 +9,12 @@
   "author": "cmariofonseca, andersonherrera y yuraniviloria",
   "license": "ISC",
   "dependencies": {
-    "blob": "^0.1.0",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
-    "file-saver": "^2.0.2",
+    "i": "^0.3.6",
     "json-to-txt": "^2.0.0",
     "morgan": "^1.9.1",
+    "npm": "^6.14.3",
     "uuid": "^7.0.2"
   },
   "devDependencies": {

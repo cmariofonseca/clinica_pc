@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <%- include('partials/header') %>
+  </head>
+
+  <body style="background-color: lightsteelblue;">
+
+    <%- include('partials/navigation')  %>
+
+    <div class="container p-4">
+      <div class="row">
+        <% users.forEach(user => { %>
+          <div class="col-md-4">
+            <div class="card">
+              <div class="card-header">
+                user_id: <%= user.id %>
+              </div>
+              <div class="card-body">
+                <p><%= user.address %></p>
+                <p><%= user.date_born %></p>
+                <p><%= user.email %></p>
+                <p><%= user.identification %></p>
+                <p><%= user.last_name %></p>
+                <p><%= user.name %></p>
+                <p><%= user.password %></p>
+                <p><%= user.phone %></p>
+                <p><%= user.user_name %></p>
+              </div>
+              <div class="card-footer">
+                <a href="/delete/<%= user.id %>" class="btn btn-danger">Eliminar</a>
+              </div>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+
+  </body>
+
+</html>
