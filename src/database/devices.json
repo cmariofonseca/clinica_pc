@@ -1,15 +1,1 @@
-[
-  {
-    "code": "4aa3eba8-9709-4100-953e-60afcfcacb27",
-    "request_description": "Se pixela las imagenes",
-    "serial": "456789876543",
-    "brand": "HP",
-    "model": "Accer notebook2",
-    "processor": "Core i5 4700",
-    "ram": "32",
-    "disk": "1 t",
-    "os": "Windows",
-    "office": "10",
-    "owner": "Anderson Herrera Guzmán"
-  }
-]
+[{"code":"e323ee5f-8892-4a34-9cc9-7db432caf109","request_description":"El equipo no enciende","serial":"456789876543","brand":"Lenovo","model":"EliteBook","processor":"Core i5 4700","ram":"32","disk":"1 t","os":"Windows","office":"10","owner":"Claudia Patricia Uran Buitrago"},{"code":"db5420fc-162f-4b08-b05a-f38377f46909","request_description":"El teclado no sirve","serial":"76543456789","brand":"Accer","model":"EliteBook","processor":"Core i5 4700","ram":"32","disk":"1 t","os":"Windows","office":"10","owner":"Alejandra Fonseca Saldarriaga"},{"code":"620e37fb-c731-4d20-a561-3d1f870327f2","request_description":"Se calienta al poco tiempo de encenderlo y se apaga","serial":"456789876543","brand":"HP","model":"Accer notebook","processor":"Core i5 4700","ram":"32","disk":"1 t","os":"Windows","office":"10","owner":"Miguel Angel Arango Lopez"},{"code":"ed02f3d8-2896-4bc9-9e4f-c897111d0501","request_description":"Se cayo y ya no funciona","serial":"456789876543","brand":"Lenovo","model":"Accer notebook","processor":"Core i5 4700","ram":"32","disk":"1 t","os":"Windows","office":"10","owner":"Alejandra Fonseca Saldarriaga"}]
