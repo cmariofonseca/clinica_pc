@@ -14,13 +14,12 @@ let requestsTxt = ''
 let usersTxt  = ''
 
 
-/* LOGIN EMPLEADOS */
+/* LOGIN EMPLEADOS ------------------------------------------------------------------- */
 router.get('/login', (req, res) => {
   res.render('login.ejs')
 })
 
 router.post('/login', (req, res) => {
-  console.log(req.body)
   users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
   let isLogin = false
   for (let index = 0; index < users.length; index++) {
@@ -40,7 +39,7 @@ router.post('/login', (req, res) => {
 })
 
 
-/* REGISGTRO DE CLIENTES */
+/* REGISGTRO DE CLIENTES ------------------------------------------------------------- */
 router.get('/registers', (req, res) => {
   res.render('registers.ejs')
 })
@@ -60,7 +59,7 @@ router.post('/registers', (req, res) => {
 })
 
 
-/* MODULO GESTION DE RECEPCION DE EQUIPOS --------------------------------------------------- */
+/* MODULO GESTION DE RECEPCION DE EQUIPOS -------------------------------------------- */
 router.get('/receptions', (req, res) => {
   const code = uuidv4()
   currentUser = JSON.parse(fs.readFileSync('src/database/currentUser.json', 'utf-8'))
@@ -75,67 +74,38 @@ router.post('/receptions', (req, res) => {
   devices = JSON.parse(fs.readFileSync('src/database/devices.json', 'utf-8'))
   requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
   currentUser = JSON.parse(fs.readFileSync('src/database/currentUser.json', 'utf-8'))
-  const {
-    code,
-    request_description,
-    serial,
-    brand,
-    model,
-    processor,
-    ram,
-    disk,
-    os,
-    office,
-    owner
-  } = req.body
   const newRequest = {
     isActive: true,
-    isDevice: true,
     request_description: req.body.request_description,
     receiving_date: datetime,
     receiving_employee: "",
     delivery_employee: "",
     customer: currentUser.name + ' ' + currentUser.last_name,
-    devices: {
-      code,
-      serial,
-      brand,
-      model,
-      processor,
-      ram,
-      disk,
-      os,
-      office,
-      owner
-    },
     total_paid: "",
     total_spent: "",
     total_net: "",
     delivery_date: "",
-    delevery_description: {
-      item: "",
-      action: "",
-      price: ""
-    },
+    item: "",
+    action: "",
+    price: "",
     responsible_employee: "",
-    code: uuidv4()
+    code: req.body.code
   }
   devices.push(req.body)
   requests.push(newRequest)
   fs.writeFileSync('src/database/devices.json', JSON.stringify(devices), 'utf-8')
-  devicesTxt = jsonToTxt({ filePath: 'src/database/devices.json' });
+  devicesTxt = jsonToTxt({ filePath: 'src/database/devices.json' })
   fs.writeFileSync('src/download/devices.txt', devicesTxt, 'utf-8')
   fs.writeFileSync('src/database/requests.json', JSON.stringify(requests), 'utf-8')
-  requestsTxt = jsonToTxt({ filePath: 'src/database/requests.json' });
+  requestsTxt = jsonToTxt({ filePath: 'src/database/requests.json' })
   fs.writeFileSync('src/download/requests.txt', requestsTxt, 'utf-8')
-  res.redirect('/requests')
+  res.redirect('/registers')
 })
 
 
-/* MODULO GESTION DE SOLICITUDES ------------------------------------------------ */
+/* MODULO GESTION DE SOLICITUDES ----------------------------------------------------- */
 router.get('/requests', (req, res) => {
   requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
-  console.log(requests)
   res.render('requests.ejs', {
     requests
   })
@@ -171,11 +141,9 @@ router.post('/request', (req, res) => {
     total_spent,
     total_net: Number(total_paid) - Number(total_spent),
     delivery_date: datetime,
-    delevery_description: {
-      item,
-      action,
-      price,
-    },
+    item,
+    action,
+    price,
     responsible_employee,
     code
   }
@@ -191,19 +159,9 @@ router.post('/request', (req, res) => {
 })
 
 
-/* MODULO GESTION DE REPORTES --------------------------------------------------- */
+/* MODULO GESTION DE REPORTES -------------------------------------------------------- */
 router.get('/reports', (req, res) => {
-  devices = JSON.parse(fs.readFileSync('src/database/devices.json', 'utf-8'))
-  const lengthDevices = devices.length
-  requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
-  const lengthRequests =requests.length
-  users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-  const lengthUsers = users.length
-  res.render('reports.ejs', {
-    lengthDevices,
-    lengthRequests,
-    lengthUsers
-  })
+  res.render('reports.ejs')
 })
 
 router.get('/reports-devices', (req, res) => {
@@ -215,8 +173,6 @@ router.get('/reports-requests', (req, res) => {
 })
 
 router.get('/reports-users', (req, res) => {
-  console.log('se llamó endpoint')
-  console.log(req)
   res.download('src/download/users.txt')
 })
 

@@ -1,6 +1,5 @@
-isActiverequest_descriptionreceiving_datereceiving_employeecustomertotal_paidtotal_spenttotal_netdelivery_datedelevery_descriptionresponsible_employeecode
-falseEl equipo se calienta con facilidad y se apaga3/23/2020, 5:27:25 PMYurani ViloriaClaudia Patricia Uran Buitrago10000040000600003/23/2020, 5:39:53 PM[object Object]Alberto Perezeede81b1-960c-4f9d-bb5b-aa9ed19cb9e6
-falseNo funciona el teclado3/23/2020, 5:45:39 PMAnderson HerreraAlejandra Fonseca Saldarriaga12000050000700003/23/2020, 5:46:34 PM[object Object]Mauricio Velezf143f0d8-3d90-4a54-adfc-f20214a4007b
-trueNo enciende el equipo3/23/2020, 5:52:11 PMCarlos Mario Fonseca Naranjo[object Object]e0579d7b-a3cc-4589-96c9-9b694511937c
-trueNo prende3/23/2020, 5:54:09 PMAlejandra Uran Buitrago[object Object]4b1d3c2b-5324-4f74-97fe-e1d4e3e80da9
-trueSe pixela las imagenes3/23/2020, 5:55:09 PMAnderson Herrera Guzmán[object Object]d48be15f-1b5e-4555-9315-205f30b7b41a
+isActiverequest_descriptionreceiving_datereceiving_employeecustomertotal_paidtotal_spenttotal_netdelivery_dateitemactionpriceresponsible_employeecode
+falseEl equipo no enciende3/23/2020, 10:58:33 PMMiguel Angel Arango LopezClaudia Patricia Uran Buitrago10000040000600003/23/2020, 11:06:58 PMBoardCambio de pieza25000Alberto Perez3e8cde10-9906-4de1-8223-de38c127bb07
+falseEl teclado no sirve3/23/2020, 11:01:00 PMMiguel Angel Arango LopezAlejandra Fonseca Saldarriaga12000050000700003/23/2020, 11:07:14 PMTecladoCambio de pieza30000Mauricio Velez21c2b174-69c1-4420-9137-cd0a57f35828
+falseSe calienta al poco tiempo de encenderlo y se apaga3/23/2020, 11:02:52 PMMiguel Angel Arango LopezMiguel Angel Arango Lopez12000040000800003/23/2020, 11:07:31 PMTecladoCambio de pieza25000Alberto Perez519be72c-a0ec-4790-b80d-ee176c8b663c
+trueSe cayo y ya no funciona3/23/2020, 11:33:01 PMAlejandra Fonseca Saldarriagaed02f3d8-2896-4bc9-9e4f-c897111d0501
