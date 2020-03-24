@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
 
-<head>
-  <%- include('partials/header') %>
-</head>
+  <head>
+    <%- include('partials/header') %>
+  </head>
 
-<body style="background-color: lightsteelblue;">
+  <body style="background-color: lightsteelblue;">
 
-  <div class="container">
-    <h1>Clinica PC</h1>
-    <h4>Registrar usuarios</h4>
-  </div>
+    <%- include('partials/navigation')  %>
 
-  <div class="container p-4">
-    <div class="col-md-6">
+    <div class="container mt-4">
+      <h1>Clinica PC</h1>
+      <h4>Registrar usuarios</h4>
+    </div>
+
+    <div class="container p-4">
       <form method="POST" action="/registers" class="card card-body">
         <div class="form-group row">
           <label for="identification" class="col-sm-5 col-form-label">Identificación</label>
@@ -31,18 +32,6 @@
           <label for="last_name" class="col-sm-5 col-form-label">Apellidos</label>
           <div class="col-sm-7">
             <input name="last_name" id="last_name" type="text" class="form-control" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="user_name" class="col-sm-5 col-form-label">Nombre usuario</label>
-          <div class="col-sm-7">
-            <input name="user_name" id="user_name" type="text" class="form-control" required>
-          </div>
-        </div>
-        <div class="form-group row">
-          <label for="password" class="col-sm-5 col-form-label">Contraseña</label>
-          <div class="col-sm-7">
-            <input name="password" id="password" type="text" class="form-control" required>
           </div>
         </div>
         <div class="form-group row">
@@ -72,8 +61,7 @@
         <button class="btn btn-primary" type="submit">Registrarse</button>
       </form>
     </div>
-  </div>
 
-</body>
+  </body>
 
 </html>
