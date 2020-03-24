@@ -7,9 +7,7 @@
 
   <body style="background-color: lightsteelblue;">
 
-    <%- include('partials/navigation')  %>
-
-    <div class="container">
+    <div class="container mt-4">
       <h1>Clinica PC</h1>
       <h4>Llene el formulario con una descripción clara del servicio solicitado</h4>
     </div>
@@ -17,15 +15,74 @@
     <div class="container p-4">
       <div class="col-md-10">
         <form method="POST" action="/receptions" class="card card-body">
-          <div class="form-group">
-            <label for="request_description">Descripción detallada de la solicitud</label>
-            <textarea name="request_description" id="request_description" class="form-control" rows="3" required></textarea>
+          <div class="form-group row">
+            <label for="code" class="col-sm-5 col-form-label">Código de solicitud</label>
+            <div class="col-sm-7">
+              <input name="code" value="<%= code %>" placeholder="<%= code %>" type="text" class="form-control"
+                readonly>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="model">Equipo(s)</label>
-            <input name="model" id="model" type="text" class="form-control" required>
+          <div class="form-group row">
+            <label for="request_description" class="col-sm-5 col-form-label">Descripción detallada de la solicitud</label>
+            <div class="col-sm-7">
+              <textarea name="request_description" id="request_description" class="form-control" rows="3" required></textarea>
+            </div>
           </div>
-          <button class="btn btn-primary" type="submit">Registrar equipo</button>
+          <div class="form-group row">
+            <label for="serial" class="col-sm-5 col-form-label">Serial</label>
+            <div class="col-sm-7">
+              <input name="serial" id="serial" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="brand" class="col-sm-5 col-form-label">Marca</label>
+            <div class="col-sm-7">
+              <input name="brand" id="brand" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="model" class="col-sm-5 col-form-label">Modelo</label>
+            <div class="col-sm-7">
+              <input name="model" id="model" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="processor" class="col-sm-5 col-form-label">Procesador</label>
+            <div class="col-sm-7">
+              <input name="processor" id="processor" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="ram" class="col-sm-5 col-form-label">Memoria Ram</label>
+            <div class="col-sm-7">
+              <input name="ram" id="ram" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="disk" class="col-sm-5 col-form-label">Disco duro</label>
+            <div class="col-sm-7">
+              <input name="disk" id="disk" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="os" class="col-sm-5 col-form-label">Sistema operativo</label>
+            <div class="col-sm-7">
+              <input name="os" id="os" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="office" class="col-sm-5 col-form-label">Microsoft Office</label>
+            <div class="col-sm-7">
+              <input name="office" id="office" type="text" class="form-control" required>
+            </div>
+          </div>
+          <div class="form-group row">
+            <label for="owner" class="col-sm-5 col-form-label">Propietario</label>
+            <div class="col-sm-7">
+              <input name="owner" value="<%= `${currentUser.name} ${currentUser.last_name}` %>" placeholder="<%= `${currentUser.name} ${currentUser.last_name}` %>" type="text" class="form-control" readonly>
+            </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Guardar</button>
         </form>
       </div>
     </div>

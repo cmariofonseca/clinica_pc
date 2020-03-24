@@ -7,22 +7,21 @@
 
   <body style="background-color: lightsteelblue;">
 
-    <div class="container">
+    <div class="container mt-4">
       <h1>Clinica PC</h1>
-      </h4>
+      <h4>Solo para empleados</h4>
     </div>
 
     <div class="container p-4">
-      <div class="col-md-6">
-        <h3>Solo para empleados</h3>
+      <div style="display: flex; justify-content: center;">
         <form method="POST" action="/login" class="card card-body">
           <div class="form-group">
             <label for="user_name">Usuario</label>
-            <input name="user_name" id="user_name" type="text" class="form-control" required>
+            <input name="user_name" type="text" class="form-control" required>
           </div>
           <div class="form-group">
             <label for="password">Contraseña</label>
-            <input name="password" id="password" type="text" class="form-control" required>
+            <input name="password" type="text" class="form-control" required>
           </div><button class="btn btn-success" type="submit">Ingresar</button>
         </form>
       </div>

@@ -6,9 +6,13 @@ const jsonToTxt = require('json-to-txt')
 
 let datetime = ''
 let currentUser = {}
-let users = []
-let usersTxt = ''
+let devices = []
 let requests = []
+let users = []
+let devicesTxt = ''
+let requestsTxt = ''
+let usersTxt  = ''
+
 
 /* LOGIN EMPLEADOS */
 router.get('/login', (req, res) => {
@@ -16,16 +20,23 @@ router.get('/login', (req, res) => {
 })
 
 router.post('/login', (req, res) => {
+  console.log(req.body)
   users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
-  const { user_name, password } = req.body
-  const newLogin = { user_name, password, }
-  users.forEach(user => {
-    if (user.user_name == user_name && user.password == password) {
-      res.redirect('/registers')
+  let isLogin = false
+  for (let index = 0; index < users.length; index++) {
+    const user = users[index];
+    if (user.user_name == req.body.user_name && user.password == req.body.password) {
+      isLogin = true
+      break
     } else {
-      res.redirect('/login')
+      isLogin = false
     }
-  })
+  }
+  if (isLogin) {
+    res.redirect('/registers')
+  } else {
+    res.redirect('/login')
+  }
 })
 
 
@@ -37,25 +48,46 @@ router.get('/registers', (req, res) => {
 router.post('/registers', (req, res) => {
   users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
   req.body.id = uuidv4()
+  req.body.user_name = ''
+  req.body.password = ''
   currentUser = req.body
   users.push(currentUser)
   fs.writeFileSync('src/database/users.json', JSON.stringify(users), 'utf-8')
   usersTxt = jsonToTxt({ filePath: 'src/database/users.json' });
-  fs.writeFileSync('src/database/users.txt', usersTxt, 'utf-8')
+  fs.writeFileSync('src/download/users.txt', usersTxt, 'utf-8')
   fs.writeFileSync('src/database/currentUser.json', JSON.stringify(currentUser), 'utf-8')
   res.redirect('/receptions')
 })
 
 
-/* MODULO GESTION DE USUARIOS --------------------------------------------------- */
+/* MODULO GESTION DE RECEPCION DE EQUIPOS --------------------------------------------------- */
 router.get('/receptions', (req, res) => {
-  res.render('receptions.ejs')
+  const code = uuidv4()
+  currentUser = JSON.parse(fs.readFileSync('src/database/currentUser.json', 'utf-8'))
+  res.render('receptions.ejs', {
+    currentUser,
+    code
+  })
 })
 
 router.post('/receptions', (req, res) => {
   datetime = new Date().toLocaleString()
+  devices = JSON.parse(fs.readFileSync('src/database/devices.json', 'utf-8'))
   requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
   currentUser = JSON.parse(fs.readFileSync('src/database/currentUser.json', 'utf-8'))
+  const {
+    code,
+    request_description,
+    serial,
+    brand,
+    model,
+    processor,
+    ram,
+    disk,
+    os,
+    office,
+    owner
+  } = req.body
   const newRequest = {
     isActive: true,
     isDevice: true,
@@ -65,8 +97,16 @@ router.post('/receptions', (req, res) => {
     delivery_employee: "",
     customer: currentUser.name + ' ' + currentUser.last_name,
     devices: {
-      model: req.body.model,
-      owner: currentUser.name + ' ' + currentUser.last_name,
+      code,
+      serial,
+      brand,
+      model,
+      processor,
+      ram,
+      disk,
+      os,
+      office,
+      owner
     },
     total_paid: "",
     total_spent: "",
@@ -80,13 +120,16 @@ router.post('/receptions', (req, res) => {
     responsible_employee: "",
     code: uuidv4()
   }
+  devices.push(req.body)
   requests.push(newRequest)
+  fs.writeFileSync('src/database/devices.json', JSON.stringify(devices), 'utf-8')
+  devicesTxt = jsonToTxt({ filePath: 'src/database/devices.json' });
+  fs.writeFileSync('src/download/devices.txt', devicesTxt, 'utf-8')
   fs.writeFileSync('src/database/requests.json', JSON.stringify(requests), 'utf-8')
-  res.redirect('/users')
+  requestsTxt = jsonToTxt({ filePath: 'src/database/requests.json' });
+  fs.writeFileSync('src/download/requests.txt', requestsTxt, 'utf-8')
+  res.redirect('/requests')
 })
-
-
-/* MODULO GESTION DE EQUIPOS ---------------------------------------------------- */
 
 
 /* MODULO GESTION DE SOLICITUDES ------------------------------------------------ */
@@ -147,13 +190,34 @@ router.post('/request', (req, res) => {
   res.redirect('/requests')
 })
 
+
 /* MODULO GESTION DE REPORTES --------------------------------------------------- */
-router.get('/reports/users', (req, res) => {
-  res.download('src/download/users.txt')
+router.get('/reports', (req, res) => {
+  devices = JSON.parse(fs.readFileSync('src/database/devices.json', 'utf-8'))
+  const lengthDevices = devices.length
+  requests = JSON.parse(fs.readFileSync('src/database/requests.json', 'utf-8'))
+  const lengthRequests =requests.length
+  users = JSON.parse(fs.readFileSync('src/database/users.json', 'utf-8'))
+  const lengthUsers = users.length
+  res.render('reports.ejs', {
+    lengthDevices,
+    lengthRequests,
+    lengthUsers
+  })
 })
 
-router.post('/reports', (req, res) => {
-  res.redirect('/reports')
+router.get('/reports-devices', (req, res) => {
+  res.download('src/download/devices.txt')
+})
+
+router.get('/reports-requests', (req, res) => {
+  res.download('src/download/requests.txt')
+})
+
+router.get('/reports-users', (req, res) => {
+  console.log('se llamó endpoint')
+  console.log(req)
+  res.download('src/download/users.txt')
 })
 
 module.exports = router
