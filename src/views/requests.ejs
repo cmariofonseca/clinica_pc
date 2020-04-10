@@ -37,7 +37,8 @@
             <div class="form-group row">
               <label for="receiving_employee" class="col-sm-5 col-form-label">Empleado que recibió</label>
               <div class="col-sm-7">
-                <input name="receiving_employee" type="text" class="form-control" required>
+                <input name="receiving_employee" value="<%= request.receiving_employee %>" placeholder="<%= request.receiving_employee %>"
+                  type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
@@ -76,7 +77,8 @@
             <div class="form-group row">
               <label for="responsible_employee" class="col-sm-5 col-form-label">Empleado que entrega</label>
               <div class="col-sm-7">
-                <input name="responsible_employee" type="text" class="form-control" required>
+                <input name="responsible_employee" value="<%= `${currentEmployee.name} ${currentEmployee.last_name}` %>" placeholder="<%= `${currentEmployee.name} ${currentEmployee.last_name}` %>"
+                  type="text" class="form-control" readonly>
               </div>
             </div>
             <button class="btn btn-primary" type="submit">Guardar datos de la solicitud</button>

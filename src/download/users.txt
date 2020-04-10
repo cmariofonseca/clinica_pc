@@ -1,8 +1,6 @@
-identification     name                 last_name               user_name            password     date_born      email                            address                phone          id                                       
-1234567890         Carlos Mario         Fonseca Naranjo         carlos.fonseca       123          01-01-2000     carlos.fonseca@udea.edu.co       Carrera 52 calle 9     0987654321     48fc9544-c4d0-4844-a01c-7aefdbe85f27     
-1234567890         Yurani               Viloria Chariz          yurani.viloria       123          01-01-2000     yurani.viloria@udea.edu.co       Carrera 52 calle 9     0987654321     12f038e6-3363-4828-af48-3e47f0ae1ef1     
-1234567890         Anderson             Herrera Guzmán          anderson.herrera     123          01-01-2000     anderson.herrera@udea.edu.co     Carrera 52 calle 9     0987654321     1531e30e-f24d-4880-9285-d5e3780e498e     
-0987654321         Claudia Patricia     Uran Buitrago                                             18-03-2006     claudiapatricia@hotmail.com      Carrera 52 calle 9     0987654321     06346ed4-1fdc-43f7-912c-83ccdbd7d57b     
-5432109876         Alejandra            Fonseca Saldarriaga                                       01-01-2000     alejandra@gmail.com              Carrera 52 calle 9     5676543234     5a8bc79b-ac46-4043-a7fe-1e0f4dc264aa     
-5432109876         Miguel Angel         Arango Lopez                                              18-03-2006     miguelarango@gmail.com           Carrera 52 calle 9     0987654321     af1d86d5-a9b7-4947-9df9-ff94153f9aee     
-1234567890         Alejandra            Fonseca Saldarriaga                                       20-11-1974     alejandra@gmail.com              Carrera 52 calle 9     0987654321     cf0c1b4d-a5b0-4d73-8455-bdedf9b90614     
+identification     name                 last_name               date_born      email                           address                phone          id                                       
+1234567890         Alejandra            Fonseca Saldarriaga     18-03-2006     alejandra@gmail.com             Carrera 52 calle 9     0987654321     79331875-ca69-4b8c-b361-03744111159e     
+1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     c8e238e0-0227-4069-985e-992c620204fb     
+1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     2de452d5-38ef-4918-bc34-7af869f54026     
+1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     e3089b12-0b59-4b4b-b9ef-44433c656f22     
+0987654321         Claudia Patricia     Uran Buitrago           20-11-1974     claudiapatricia@hotmail.com     Carrera 52 calle 9     0987654321     b913e1bc-d4d6-4727-848e-f7af242a080e     
