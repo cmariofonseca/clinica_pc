@@ -1,0 +1,38 @@
+[
+  {
+    "identification": "1234567890",
+    "name": "Carlos Mario",
+    "last_name": "Fonseca Naranjo",
+    "user_name": "carlos.fonseca",
+    "password": "123",
+    "date_born": "01-01-2000",
+    "email": "carlos.fonseca@udea.edu.co",
+    "address": "Carrera 52 calle 9",
+    "phone": "0987654321",
+    "id": "48fc9544-c4d0-4844-a01c-7aefdbe85f27"
+  },
+  {
+    "identification": "1234567890",
+    "name": "Yurani",
+    "last_name": "Viloria Chariz",
+    "user_name": "yurani.viloria",
+    "password": "123",
+    "date_born": "01-01-2000",
+    "email": "yurani.viloria@udea.edu.co",
+    "address": "Carrera 52 calle 9",
+    "phone": "0987654321",
+    "id": "12f038e6-3363-4828-af48-3e47f0ae1ef1"
+  },
+  {
+    "identification": "1234567890",
+    "name": "Anderson",
+    "last_name": "Herrera Guzmán",
+    "user_name": "anderson.herrera",
+    "password": "123",
+    "date_born": "01-01-2000",
+    "email": "anderson.herrera@udea.edu.co",
+    "address": "Carrera 52 calle 9",
+    "phone": "0987654321",
+    "id": "1531e30e-f24d-4880-9285-d5e3780e498e"
+  }
+]

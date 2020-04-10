@@ -7,6 +7,8 @@
 
   <body style="background-color: lightsteelblue;">
 
+    <%- include('partials/navigation')  %>
+
     <div class="container mt-4">
       <h1>Clinica PC</h1>
       <h4>Llene el formulario con una descripción clara del servicio solicitado</h4>
@@ -79,7 +81,7 @@
           <div class="form-group row">
             <label for="owner" class="col-sm-5 col-form-label">Propietario</label>
             <div class="col-sm-7">
-              <input name="owner" value="<%= `${currentUser.name} ${currentUser.last_name}` %>" placeholder="<%= `${currentUser.name} ${currentUser.last_name}` %>" type="text" class="form-control" readonly>
+              <input name="owner" value="<%= `${currentCustomer.name} ${currentCustomer.last_name}` %>" placeholder="<%= `${currentCustomer.name} ${currentCustomer.last_name}` %>" type="text" class="form-control" readonly>
             </div>
           </div>
           <button class="btn btn-primary" type="submit">Guardar</button>
