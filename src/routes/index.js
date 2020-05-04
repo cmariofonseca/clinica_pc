@@ -5,6 +5,7 @@ const usersCtrl = require('../controllers/users')
 const devicesCtrl = require('../controllers/devices')
 const requestsCtrl = require('../controllers/requests')
 const reportsCtrl = require('../controllers/reports')
+const dataTreeCtrl = require('../controllers/dataTree')
 
 
 /* LOGIN EMPLEADOS ------------------------------------------------------------------- */
@@ -39,5 +40,9 @@ router.get('/reports-devices', reportsCtrl.devices)
 router.get('/reports-requests', reportsCtrl.requests)
 
 router.get('/reports-users', reportsCtrl.users)
+
+
+/* MODULO GESTION DE REPORTES -------------------------------------------------------- */
+router.get('/dataTree', dataTreeCtrl.showViewDataTree)
 
 module.exports = router

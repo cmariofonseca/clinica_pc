@@ -1,3 +1,7 @@
-code                                     request_description             serial           brand     model              processor        ram     disk     os          office     owner                              
-200ab0c5-7a4a-440f-8911-7cc48fbd9385     yuerawedhjmjnkbhcfgersrtyui     456789876543     Accer     Accer notebook     Core i5 4700     32      1 t      Windows     10         Carlos Mario Fonseca Naranjo       
-dc2a7046-9068-45e7-887a-716c3b420580     Se recalienta                   456789876543     HP        EliteBook          Core i5 4700     32      1 t      Windows     10         Claudia Patricia Uran Buitrago     
+id       data
+18       [object Object]
+30       [object Object]
+25       [object Object]
+undefined[object Object]
+81       [object Object]
+75       [object Object]

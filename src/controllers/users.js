@@ -1,7 +1,12 @@
-const { v4: uuidv4 } = require('uuid')
 const usersDao = require('../models/users')
 
 const usersCtrl = {}
+
+/* GENERADOR DE ID ALEATORIO --------------------------------------------------------- */
+function getRandomInt() {
+  return Math.floor(Math.random() * Math.floor(100))
+}
+
 
 /* LOGIN EMPLEADOS ------------------------------------------------------------------- */
 usersCtrl.showViewLogin = (req, res) => {
@@ -32,6 +37,7 @@ usersCtrl.login = (req, res) => {
   }
 }
 
+
 /* REGISGTRO DE CLIENTES ------------------------------------------------------------- */
 usersCtrl.showViewRegisters = (req, res) => {
   res.render('registers.ejs')
@@ -40,10 +46,11 @@ usersCtrl.showViewRegisters = (req, res) => {
 usersCtrl.registers = (req, res) => {
   let users = []
   users = usersDao.getAllCustomers()
-  console.log('33333333333333333333333333333333333333333333333333333333333333333333333333')
-  console.log(users)
-  req.body.id = uuidv4()
-  users.push(req.body)
+  const newUser = {
+    id: getRandomInt(),
+    data: req.body
+  }
+  users.push(newUser)
   usersDao.createCustomer(users)
   usersDao.createCurrentCustomer(req.body)
   usersDao.saveReport()

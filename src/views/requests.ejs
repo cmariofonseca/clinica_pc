@@ -10,41 +10,41 @@
     <%- include('partials/navigation')  %>
 
     <% requests.forEach(request => { %>
-      <% if (request.isActive) { %>
+      <% if (request.data.isActive) { %>
         <div class="container p-4">
           <form method="POST" action="/request" class="card card-body">
             <div class="form-group row">
-              <label for="code" class="col-sm-5 col-form-label">Código de solicitud</label>
+              <label for="id" class="col-sm-5 col-form-label">Código de solicitud</label>
               <div class="col-sm-7">
-                <input name="code" value="<%= request.code %>" placeholder="<%= request.code %>" type="text" class="form-control"
+                <input name="id" value="<%= request.id %>" placeholder="<%= request.id %>" type="text" class="form-control"
                   readonly>
               </div>
             </div>
             <div class="form-group row">
               <label for="request_description" class="col-sm-5 col-form-label">Descripción solicitud</label>
               <div class="col-sm-7">
-                <input name="request_description" value="<%= request.request_description %>"
-                  placeholder="<%= request.request_description %>" type="text" class="form-control" readonly>
+                <input name="request_description" value="<%= request.data.request_description %>"
+                  placeholder="<%= request.data.request_description %>" type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
               <label for="receiving_date" class="col-sm-5 col-form-label">Fecha de recibido</label>
               <div class="col-sm-7">
-                <input name="receiving_date" value="<%= request.receiving_date %>" placeholder="<%= request.receiving_date %>"
+                <input name="receiving_date" value="<%= request.data.receiving_date %>" placeholder="<%= request.data.receiving_date %>"
                   type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
               <label for="receiving_employee" class="col-sm-5 col-form-label">Empleado que recibió</label>
               <div class="col-sm-7">
-                <input name="receiving_employee" value="<%= request.receiving_employee %>" placeholder="<%= request.receiving_employee %>"
+                <input name="receiving_employee" value="<%= request.data.receiving_employee %>" placeholder="<%= request.data.receiving_employee %>"
                   type="text" class="form-control" readonly>
               </div>
             </div>
             <div class="form-group row">
               <label for="customer" class="col-sm-5 col-form-label">Cliente</label>
               <div class="col-sm-7">
-                <input name="customer" value="<%= request.customer %>" placeholder="<%= request.customer %>" type="text"
+                <input name="customer" value="<%= request.data.customer %>" placeholder="<%= request.data.customer %>" type="text"
                   class="form-control" readonly>
               </div>
             </div>

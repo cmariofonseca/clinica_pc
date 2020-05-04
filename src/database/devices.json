@@ -1,1 +1,92 @@
-[]
+[
+  {
+    "id": "18",
+    "data": {
+      "request_description": "Se callo el pc y se quebro la pantalla",
+      "serial": "456789876543",
+      "brand": "Lenovo",
+      "model": "Accer notebook2",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Windows",
+      "office": "10",
+      "owner": "Alejandra Fonseca Saldarriaga"
+    }
+  },
+  {
+    "id": "30",
+    "data": {
+      "request_description": "Cuando se prende el equipo se calienta y se apaga al poco tiempo",
+      "serial": "76543456789",
+      "brand": "Accer",
+      "model": "EliteBook",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Linux",
+      "office": "n/a",
+      "owner": "Claudia Patricia Uran Buitrago"
+    }
+  },
+  {
+    "id": "25",
+    "data": {
+      "request_description": "El teclado dejo de funcionar",
+      "serial": "456789876543",
+      "brand": "HP",
+      "model": "EliteBook",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Windows",
+      "office": "10",
+      "owner": "Miguel Angel Arango Lopez"
+    }
+  },
+  {
+    "id": "52",
+    "data": {
+      "request_description": "No enciende",
+      "serial": "456789876543",
+      "brand": "Lenovo",
+      "model": "EliteBook",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Windows",
+      "office": "10",
+      "owner": "Gustavo Adres Arango"
+    }
+  },
+  {
+    "id": "81",
+    "data": {
+      "request_description": "Se daño el mouse integrado",
+      "serial": "456789876543",
+      "brand": "Accer",
+      "model": "EliteBook",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Linux",
+      "office": "n/a",
+      "owner": "Sandra Muñoz"
+    }
+  },
+  {
+    "id": "75",
+    "data": {
+      "request_description": "Actualizar software del equipo",
+      "serial": "456789876543",
+      "brand": "HP",
+      "model": "EliteBook",
+      "processor": "Core i5 4700",
+      "ram": "32",
+      "disk": "1 t",
+      "os": "Windows",
+      "office": "10",
+      "owner": "Jessica Peña"
+    }
+  }
+]
