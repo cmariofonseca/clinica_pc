@@ -1,3 +1,7 @@
-isActiverequest_descriptionreceiving_datereceiving_employeedelivery_employeecustomertotal_paidtotal_spenttotal_netdelivery_dateitemactionpriceresponsible_employeecode
-trueyuerawedhjmjnkbhcfgersrtyui4/9/2020, 7:17:07 PMCarlos Mario Fonseca NaranjoCarlos Mario Fonseca Naranjo200ab0c5-7a4a-440f-8911-7cc48fbd9385
-trueSe recalienta4/9/2020, 7:18:42 PMCarlos Mario Fonseca NaranjoClaudia Patricia Uran Buitragodc2a7046-9068-45e7-887a-716c3b420580
+id     data
+18     [object Object]
+30     [object Object]
+25     [object Object]
+52     [object Object]
+81     [object Object]
+75     [object Object]

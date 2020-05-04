@@ -1,5 +1,6 @@
 const requestsDao = require('../models/requests')
 const usersDao = require('../models/users')
+const redBlackTree = require('./redBlackTree')
 
 const requestsCtrl = {}
 
@@ -29,29 +30,31 @@ requestsCtrl.requests = (req, res) => {
     action,
     price,
     responsible_employee,
-    code
+    id
   } = req.body
   const requestUpdated = {
-    isActive: false,
-    request_description,
-    receiving_date,
-    receiving_employee,
-    delivery_employee,
-    customer,
-    devices,
-    total_paid,
-    total_spent,
-    total_net: Number(total_paid) - Number(total_spent),
-    delivery_date: datetime,
-    item,
-    action,
-    price,
-    responsible_employee,
-    code
+    id: id,
+    data: {
+      isActive: false,
+      request_description,
+      receiving_date,
+      receiving_employee,
+      delivery_employee,
+      customer,
+      devices,
+      total_paid,
+      total_spent,
+      total_net: Number(total_paid) - Number(total_spent),
+      delivery_date: datetime,
+      item,
+      action,
+      price,
+      responsible_employee
+    }
   }
   let position = undefined
   requests.forEach((request, index) => {
-    if (request.code == requestUpdated.code) {
+    if (request.id == requestUpdated.id) {
       position = index
     }
   })

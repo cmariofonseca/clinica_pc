@@ -1,1 +1,74 @@
-[]
+[
+  {
+    "id": 35,
+    "data": {
+      "identification": "5432109876",
+      "name": "Miguel Angel",
+      "last_name": "Arango Lopez",
+      "date_born": "18-03-2006",
+      "email": "miguelangel@hotmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "0987654321"
+    }
+  },
+  {
+    "id": 54,
+    "data": {
+      "identification": "1234567890",
+      "name": "Alejandra",
+      "last_name": "Fonseca Saldarriaga",
+      "date_born": "18-03-2006",
+      "email": "alejandra@gmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "0987654321"
+    }
+  },
+  {
+    "id": 18,
+    "data": {
+      "identification": "0987654321",
+      "name": "Claudia Patricia",
+      "last_name": "Uran Buitrago",
+      "date_born": "01-01-2000",
+      "email": "claudiapatricia@hotmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "5676543234"
+    }
+  },
+  {
+    "id": 37,
+    "data": {
+      "identification": "2345678",
+      "name": "Gustavo Adres",
+      "last_name": "Arango",
+      "date_born": "01-01-2000",
+      "email": "gustavo@gmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "0987654321"
+    }
+  },
+  {
+    "id": 87,
+    "data": {
+      "identification": "0987654321",
+      "name": "Sandra",
+      "last_name": "Muñoz",
+      "date_born": "18-03-2006",
+      "email": "sandramuñoz@gmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "0987654321"
+    }
+  },
+  {
+    "id": 23,
+    "data": {
+      "identification": "0987654321",
+      "name": "Jessica",
+      "last_name": "Peña",
+      "date_born": "20-11-1974",
+      "email": "jessica@hotmail.com",
+      "address": "Carrera 52 calle 9",
+      "phone": "5676543234"
+    }
+  }
+]

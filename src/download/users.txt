@@ -1,6 +1,7 @@
-identification     name                 last_name               date_born      email                           address                phone          id                                       
-1234567890         Alejandra            Fonseca Saldarriaga     18-03-2006     alejandra@gmail.com             Carrera 52 calle 9     0987654321     79331875-ca69-4b8c-b361-03744111159e     
-1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     c8e238e0-0227-4069-985e-992c620204fb     
-1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     2de452d5-38ef-4918-bc34-7af869f54026     
-1234567890         Carlos Mario         Fonseca Naranjo         20-11-1974     cmariofonseca@gmail.com         Carrera 52 calle 9     0987654321     e3089b12-0b59-4b4b-b9ef-44433c656f22     
-0987654321         Claudia Patricia     Uran Buitrago           20-11-1974     claudiapatricia@hotmail.com     Carrera 52 calle 9     0987654321     b913e1bc-d4d6-4727-848e-f7af242a080e     
+iddata
+54[object Object]
+18[object Object]
+35[object Object]
+37[object Object]
+87[object Object]
+23[object Object]
