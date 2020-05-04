@@ -13,8 +13,6 @@ class redBlackTree {
       left: nullChild,
       right: nullChild
     }
-    console.log('node')
-    console.log(node)
     if (!node) {
       node = newNode
     }
@@ -23,7 +21,6 @@ class redBlackTree {
     } else {
       if (newValue > node.value) {
         node.right = this.insertRBTree(node.right, newValue)
-        console.log(node.right)
         if (node.colour == 'red') {
           return node
         } else if (node.right.colour == 'red') {
@@ -118,8 +115,6 @@ class redBlackTree {
   }
 
   insertRBTreeWrapper(tree, num) {
-    console.log(tree)
-    console.log(num)
     tree = this.insertRBTree(tree, num)
     tree.colour = 'black'
     return tree

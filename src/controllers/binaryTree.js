@@ -1,6 +1,7 @@
 class Node {
-  constructor(value) {
-    this.value = value
+  constructor(newNode) {
+    this.id = newNode.id
+    this.data = newNode.data
     this.right = null
     this.left = null
   }
@@ -8,36 +9,35 @@ class Node {
 
 class BinaryTree {
 
-  addRecursive(value, node = this.root) {
+  addRecursive(newNode, node = this.root) {
     if (!node) {
-      this.root = new Node(value)
+      this.root = new Node(newNode)
       return
     }
 
-    if (value < node.value) {
+    if (newNode.id < node.id) {
       if (node.left) {
-        return this.addRecursive(value, node.left)
+        return this.addRecursive(newNode, node.left)
       }
-      node.left = new Node(value)
+      node.left = new Node(newNode)
       return
     } else {
       if (node.right) {
-        return this.addRecursive(value, node.right)
+        return this.addRecursive(newNode, node.right)
       }
-      node.right = new Node(value)
+      node.right = new Node(newNode)
       return
     }
   }
 
-  findRecursive(value, node = this.root) {
-    if (node.value === value) {
+  findRecursive(id, node = this.root) {
+    if (node.id === id) {
       return node
     }
-
-    if (node.value < value) {
-      return this.findRecursive(value, node.right)
-    } else if (node.value > value) {
-      return this.findRecursive(value, node.left)
+    if (node.id < id) {
+      return this.findRecursive(id, node.right)
+    } else if (node.id > id) {
+      return this.findRecursive(id, node.left)
     }
   }
 

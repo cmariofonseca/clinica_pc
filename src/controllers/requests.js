@@ -59,8 +59,6 @@ requestsCtrl.requests = (req, res) => {
     }
   })
   requests[position] = requestUpdated
-  console.log(requestUpdated)
-  console.log(requests[position])
   requestsDao.createRequest(requests)
   res.redirect('/requests')
 }

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <%- include('partials/header') %>
+  </head>
+
+  <body style="background-color: lightsteelblue;">
+
+    <%- include('partials/navigation')  %>
+
+    <% if (devicesTree.id) { %>
+      <!-- NIVEL 0, MAXIMO 1 NODO -->
+      <div class="container mt-3">
+        <div class="row" style="display: flex; justify-content: center;">
+          <div class="card text-center" style="width: 8rem;">
+            <div class="card-body">
+              <h5 class="card-title">ID: <%= devicesTree.id %></h5>
+              <p class="card-text"><%= devicesTree.data.request_description %></p>
+            </div>
+          </div>
+        </div>
+        <!-- NIVEL 1, MAXIMO 2 NODOS -->
+        <div class="row" style="display: flex; justify-content: center;">
+          <% if (devicesTree.left) { %>
+            <div style="display: flex; justify-content: space-evenly; margin: 10px 120px; min-width: 100px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.left.id %></h5>
+                  <p class="card-text"><%= devicesTree.left.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (devicesTree.right) { %>
+            <div style="display: flex; justify-content: space-evenly; margin: 10px 120px; min-width: 100px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.right.id %></h5>
+                  <p class="card-text"><%= devicesTree.right.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <!-- NIVEL 2, MAXIMO 4 NODOS -->
+        <div class="row" style="display: flex; justify-content: center;">
+          <% if (devicesTree.left.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.left.left.id %></h5>
+                  <p class="card-text"><%= devicesTree.left.left.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!devicesTree.left.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (devicesTree.left.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.left.right.id %></h5>
+                  <p class="card-text"><%= devicesTree.left.right.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!devicesTree.left.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (devicesTree.right.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.right.left.id %></h5>
+                  <p class="card-text"><%= devicesTree.right.left.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!devicesTree.right.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (devicesTree.right.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= devicesTree.right.right.id %></h5>
+                  <p class="card-text"><%= devicesTree.right.right.data.request_description %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!devicesTree.right.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    <% } %>
+
+  </body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+  <head>
+    <%- include('partials/header') %>
+  </head>
+
+  <body style="background-color: lightsteelblue;">
+
+    <%- include('partials/navigation')  %>
+
+    <% if (customersTree.id) { %>
+      <!-- NIVEL 0, MAXIMO 1 NODO -->
+      <div class="container mt-3">
+        <div class="row" style="display: flex; justify-content: center;">
+          <div class="card text-center" style="width: 8rem;">
+            <div class="card-body">
+              <h5 class="card-title">ID: <%= customersTree.id %></h5>
+              <p class="card-text"><%= customersTree.data.name %> <%= customersTree.data.last_name %></p>
+            </div>
+          </div>
+        </div>
+        <!-- NIVEL 1, MAXIMO 2 NODOS -->
+        <div class="row" style="display: flex; justify-content: center;">
+          <% if (customersTree.left) { %>
+            <div style="display: flex; justify-content: space-evenly; margin: 10px 120px; min-width: 100px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.left.id %></h5>
+                  <p class="card-text"><%= customersTree.left.data.name %> <%= customersTree.left.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (customersTree.right) { %>
+            <div style="display: flex; justify-content: space-evenly; margin: 10px 120px; min-width: 100px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.right.id %></h5>
+                  <p class="card-text"><%= customersTree.right.data.name %> <%= customersTree.right.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+        <!-- NIVEL 2, MAXIMO 4 NODOS -->
+        <div class="row" style="display: flex; justify-content: center;">
+          <% if (customersTree.left.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.left.left.id %></h5>
+                  <p class="card-text"><%= customersTree.left.left.data.name %> <%= customersTree.left.left.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!customersTree.left.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (customersTree.left.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.left.right.id %></h5>
+                  <p class="card-text"><%= customersTree.left.right.data.name %> <%= customersTree.left.right.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!customersTree.left.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (customersTree.right.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.right.left.id %></h5>
+                  <p class="card-text"><%= customersTree.right.left.data.name %> <%= customersTree.right.left.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!customersTree.right.left) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (customersTree.right.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title">ID: <%= customersTree.right.right.id %></h5>
+                  <p class="card-text"><%= customersTree.right.right.data.name %> <%= customersTree.right.right.data.last_name %></p>
+                </div>
+              </div>
+            </div>
+          <% } %>
+          <% if (!customersTree.right.right) { %>
+            <div style="display: flex; justify-content: space-evenly; min-width: 100px; margin: 10px 30px;">
+              <div class="card text-center" style="width: 8rem;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: red;">NULL</h5>
+                </div>
+              </div>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    <% } %>
+
+  </body>
+
+</html>

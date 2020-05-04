@@ -43,6 +43,10 @@ router.get('/reports-users', reportsCtrl.users)
 
 
 /* MODULO GESTION DE REPORTES -------------------------------------------------------- */
-router.get('/dataTree', dataTreeCtrl.showViewDataTree)
+router.get('/dataTreeCustomers', dataTreeCtrl.showViewDataTreeCustomers)
+
+router.get('/dataTreeRequests', dataTreeCtrl.showViewDataTreeRequests)
+
+router.get('/dataTreeDevices', dataTreeCtrl.showViewDataTreeDevices)
 
 module.exports = router

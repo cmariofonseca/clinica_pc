@@ -1,1 +1,116 @@
-[{"id":"18","data":{"isActive":true,"request_description":"Se callo el pc y se quebro la pantalla","receiving_date":"2020-5-3 1:28:56 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Alejandra Fonseca Saldarriaga","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}},{"id":"30","data":{"isActive":true,"request_description":"Cuando se prende el equipo se calienta y se apaga al poco tiempo","receiving_date":"2020-5-3 1:35:22 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Claudia Patricia Uran Buitrago","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}},{"id":"25","data":{"isActive":true,"request_description":"El teclado dejo de funcionar","receiving_date":"2020-5-3 1:48:56 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Miguel Angel Arango Lopez","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}},{"id":"52","data":{"isActive":true,"request_description":"No enciende","receiving_date":"2020-5-3 2:04:37 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Gustavo Adres Arango","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}},{"id":"81","data":{"isActive":true,"request_description":"Se daño el mouse integrado","receiving_date":"2020-5-3 3:56:52 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Sandra Muñoz","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}},{"id":"75","data":{"isActive":true,"request_description":"Actualizar software del equipo","receiving_date":"2020-5-3 4:13:29 PM","receiving_employee":"Carlos Mario Fonseca Naranjo","delivery_employee":"","customer":"Jessica Peña","total_paid":"","total_spent":"","total_net":"","delivery_date":"","item":"","action":"","price":"","responsible_employee":""}}]
+[
+  {
+    "id": 30,
+    "data": {
+      "isActive": true,
+      "request_description": "Cuando se prende el equipo se calienta y se apaga al poco tiempo",
+      "receiving_date": "2020-5-3 1:35:22 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Claudia Patricia Uran Buitrago",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  },
+  {
+    "id": 52,
+    "data": {
+      "isActive": true,
+      "request_description": "No enciende",
+      "receiving_date": "2020-5-3 2:04:37 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Gustavo Adres Arango",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  },
+  {
+    "id": 18,
+    "data": {
+      "isActive": true,
+      "request_description": "Se callo el pc y se quebro la pantalla",
+      "receiving_date": "2020-5-3 1:28:56 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Alejandra Fonseca Saldarriaga",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  },
+  {
+    "id": 25,
+    "data": {
+      "isActive": true,
+      "request_description": "El teclado dejo de funcionar",
+      "receiving_date": "2020-5-3 1:48:56 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Miguel Angel Arango Lopez",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  },
+  {
+    "id": 17,
+    "data": {
+      "isActive": true,
+      "request_description": "Se daño el mouse integrado",
+      "receiving_date": "2020-5-3 3:56:52 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Sandra Muñoz",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  },
+  {
+    "id": 75,
+    "data": {
+      "isActive": true,
+      "request_description": "Actualizar software del equipo",
+      "receiving_date": "2020-5-3 4:13:29 PM",
+      "receiving_employee": "Carlos Mario Fonseca Naranjo",
+      "delivery_employee": "",
+      "customer": "Jessica Peña",
+      "total_paid": "",
+      "total_spent": "",
+      "total_net": "",
+      "delivery_date": "",
+      "item": "",
+      "action": "",
+      "price": "",
+      "responsible_employee": ""
+    }
+  }
+]
