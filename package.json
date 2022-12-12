@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "i": "^0.3.6",
     "json-to-txt": "^2.0.0",
     "morgan": "^1.9.1",
